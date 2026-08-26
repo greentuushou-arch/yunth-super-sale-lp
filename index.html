@@ -86,18 +86,58 @@ a{ text-decoration:none; color:inherit; }
 .ys-timer.is-ended .ys-timer-sub{ display:none; }
 .ys-timer.is-ended .ys-timer-ended-note{ display:block; }
 
+/* ===================== 商品一覧 ===================== */
+.ys-products{ background:var(--pale); padding:36px 18px 48px; }
+.ys-cat-title{
+  font-size:1.3rem; font-weight:900; color:var(--ink); text-align:center;
+  margin:0 0 18px; position:relative; padding-bottom:10px;
+}
+.ys-cat-title::after{
+  content:''; position:absolute; left:50%; bottom:0; transform:translateX(-50%);
+  width:44px; height:4px; border-radius:2px; background:var(--pink);
+}
+.ys-products h2.ys-cat-title:not(:first-child){ margin-top:36px; }
+
+.ys-pgrid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.ys-pcard{
+  display:block; background:var(--white); border-radius:16px; overflow:hidden;
+  box-shadow:0 4px 14px rgba(58,37,48,.1); transition:transform .2s, box-shadow .2s;
+}
+.ys-pcard:hover{ transform:translateY(-3px); box-shadow:0 10px 22px rgba(58,37,48,.16); }
+.ys-pcard-img{ aspect-ratio:1/1; overflow:hidden; background:var(--pale); }
+.ys-pcard-img img{ width:100%; height:100%; object-fit:cover; }
+.ys-pcard-body{ padding:10px 12px 14px; }
+.ys-pcard-name{
+  font-size:.76rem; font-weight:700; line-height:1.55; color:var(--ink);
+  margin:0 0 8px; min-height:2.4em; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+}
+.ys-pcard-price{ font-size:.92rem; font-weight:900; color:var(--pink); margin:0 0 10px; }
+.ys-pcard-price .ys-num{ font-size:1.05em; }
+.ys-pcard-btn{
+  display:block; text-align:center; background:linear-gradient(120deg, var(--pink), var(--red));
+  color:var(--white); font-size:.72rem; font-weight:900; border-radius:999px; padding:9px;
+}
+
 @media screen and (min-width:600px){
   .ys-timer-seg b{ font-size:3.8rem; padding:16px 10px; }
   .ys-timer-seg{ min-width:88px; }
   .ys-timer-label{ font-size:1.5rem; }
+  .ys-products{ padding:52px 32px 64px; }
+  .ys-pgrid{ grid-template-columns:repeat(3,1fr); gap:20px; }
+  .ys-cat-title{ font-size:1.6rem; }
 }
 </style>
 </head>
 <body>
 <div class="ys-wrap">
 
+  <header class="ys-header">
+    <img src="images/logo.png" alt="Yunth" class="ys-header-logo">
+    <span class="ys-header-tag">楽天スーパーSALE会場</span>
+  </header>
+
   <!-- ============================================================
-       タイマー(9/3(木)23:59のチャンスタイム終了まで) — 最上部に配置
+       タイマー(9/3(木)23:59のチャンスタイム終了まで) — FV画像の直前
        ============================================================ -->
   <section class="ys-timer" id="ysTimer">
     <div class="ys-timer-inner">
@@ -116,11 +156,6 @@ a{ text-decoration:none; color:inherit; }
     </div>
   </section>
 
-  <header class="ys-header">
-    <img src="images/logo.png" alt="Yunth" class="ys-header-logo">
-    <span class="ys-header-tag">楽天スーパーSALE会場</span>
-  </header>
-
   <!-- ============================================================
        ファーストビュー(1枚の告知画像+実クリック領域を重ねる)
        ============================================================ -->
@@ -133,7 +168,120 @@ a{ text-decoration:none; color:inherit; }
     </div>
   </section>
 
-  <!-- 商品カードセクションは商品リスト確定後に追加予定 -->
+  <!-- ============================================================
+       商品一覧(美容液 / 定番アイテム)
+       ============================================================ -->
+  <section class="ys-products">
+
+    <h2 class="ys-cat-title">美容液</h2>
+    <div class="ys-pgrid">
+
+      <a href="https://item.rakuten.co.jp/yunth/10000000/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/10000000_260824.jpg" alt="Yunth 生ビタミンC 美白美容液 1ml×28包" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生ビタミンC 美白美容液 1ml×28包</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/yb-126-001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/yb-126-001_260824.jpg" alt="Yunth 生PDRN美容液 1ml×28包" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生PDRN美容液 1ml×28包</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 class="ys-cat-title">定番アイテム</h2>
+    <div class="ys-pgrid">
+
+      <a href="https://item.rakuten.co.jp/yunth/ys-r129/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/ys-r129_260824.jpg" alt="Yunth ピュアマスク Pure Mask 7枚入り" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth ピュアマスク Pure Mask 7枚入り</p>
+          <p class="ys-pcard-price"><span class="ys-num">6,820</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/10000007/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/10000007_260824.jpg" alt="Yunth 生VC美白クリーム 30g" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生VC美白クリーム 30g</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/yb-115-001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/yb-115-001_260824.jpg" alt="Yunth 生VCホワイトクリアフォーム 120g" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生VCホワイトクリアフォーム 120g</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/yb-120-001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/yb-120-001_260824.jpg" alt="Yunth フュージョンクレンジング 120ml" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth フュージョンクレンジング 120ml</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,289</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/112/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/112_260824.jpg" alt="Yunth 生VCトーンアップUV 30g" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生VCトーンアップUV 30g</p>
+          <p class="ys-pcard-price"><span class="ys-num">2,970</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/yb-113-001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/yb-113-001_260824.jpg" alt="Yunth 美白ハンドセラム 35g" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 美白ハンドセラム 35g</p>
+          <p class="ys-pcard-price"><span class="ys-num">1,980</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/yb-117-001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/yb-117-001_260824.jpg" alt="Yunth 生VCホワイト乳液 75ml" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生VCホワイト乳液 75ml</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/10000001/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/10000001_260824.jpg" alt="Yunth 美白シートマスク 22ml×6枚" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 美白シートマスク 22ml×6枚</p>
+          <p class="ys-pcard-price"><span class="ys-num">1,980</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+      <a href="https://item.rakuten.co.jp/yunth/111-01/" class="ys-pcard" target="_blank" rel="noopener">
+        <div class="ys-pcard-img"><img src="https://shop.r10s.jp/yunth/cabinet/11294195/11294196/event/111-01_260824.jpg" alt="Yunth 生VC美白化粧水 120ml" loading="lazy"></div>
+        <div class="ys-pcard-body">
+          <p class="ys-pcard-name">Yunth 生VC美白化粧水 120ml</p>
+          <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
+          <span class="ys-pcard-btn">詳細を見る →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
 
 </div>
 
