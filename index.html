@@ -67,9 +67,9 @@ a{ text-decoration:none; color:inherit; }
 }
 .ys-timer-inner{ position:relative; z-index:1; }
 .ys-timer-label{
-  display:inline-flex; align-items:center; gap:8px; font-size:1.3rem; font-weight:900;
-  color:var(--white); background:var(--pink); border-radius:999px; padding:9px 26px; margin:0 0 16px;
-  letter-spacing:.02em;
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; font-size:1.08rem; font-weight:900;
+  color:var(--white); background:var(--pink); border-radius:999px; padding:10px 22px; margin:0 0 16px;
+  letter-spacing:.01em; max-width:96%; line-height:1.4; text-align:center;
 }
 .ys-timer-sub{ font-size:.78rem; font-weight:700; color:rgba(255,255,255,.75); margin:0 0 18px; letter-spacing:.03em; }
 .ys-timer-digits{ display:flex; align-items:flex-end; justify-content:center; gap:10px; }
@@ -121,7 +121,7 @@ a{ text-decoration:none; color:inherit; }
 @media screen and (min-width:600px){
   .ys-timer-seg b{ font-size:3.8rem; padding:16px 10px; }
   .ys-timer-seg{ min-width:88px; }
-  .ys-timer-label{ font-size:1.5rem; }
+  .ys-timer-label{ font-size:1.35rem; }
   .ys-products{ padding:52px 32px 64px; }
   .ys-pgrid{ grid-template-columns:repeat(3,1fr); gap:20px; }
   .ys-cat-title{ font-size:1.6rem; }
@@ -141,7 +141,7 @@ a{ text-decoration:none; color:inherit; }
        ============================================================ -->
   <section class="ys-timer" id="ysTimer">
     <div class="ys-timer-inner">
-      <p class="ys-timer-label" id="ysTimerLabel">3日限定企画終了まで</p>
+      <p class="ys-timer-label" id="ysTimerLabel">9/3限定！先着5300名様セット終了まで</p>
       <p class="ys-timer-sub">9月3日(木) 10:00〜23:59限定</p>
       <div class="ys-timer-digits" id="ysTimerDigits">
         <div class="ys-timer-seg"><b class="ys-num" id="ysD">00</b><small>日</small></div>
@@ -303,7 +303,7 @@ function updateTimer(){
 
   if(diff <= 0){
     timerBox.classList.add('is-ended');
-    document.getElementById('ysTimerLabel').textContent = '3日限定企画終了';
+    document.getElementById('ysTimerLabel').textContent = '9/3限定！先着5300名様セット終了';
     return;
   }
 
