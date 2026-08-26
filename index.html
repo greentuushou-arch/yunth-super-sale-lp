@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yunth 楽天スーパーSALE会場｜9/3(木)限定チャンスタイム＋9/4-9/11 20%OFFクーポン</title>
+<meta name="description" content="Yunthの楽天スーパーSALE特設会場。9月3日(木)10:00〜23:59はYunth美容液がチャンスタイム、9/4(金)20:00〜9/11(金)1:59は20%OFFクーポン+ポイント10倍。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Josefin+Sans:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#F01D24;
+  --pink:#FF3D6F;
+  --pink-red:#F0294F;
+  --pale:#FFE9EC;
+  --white:#FFFFFF;
+  --ink:#3A2530;
+  --ink-soft:#7A6169;
+  --plum:#5B4A54;
+  --line:rgba(58,37,48,.12);
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0; background:var(--pink-red); color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  -webkit-font-smoothing:antialiased; font-size:16px;
+}
+img{ max-width:100%; display:block; }
+a{ text-decoration:none; color:inherit; }
+.ys-num{ font-family:"Josefin Sans",sans-serif; font-weight:700; }
+
+.ys-wrap{ max-width:780px; margin:0 auto; background:var(--white); position:relative; overflow:hidden; box-shadow:0 0 60px rgba(0,0,0,.3); }
+
+/* ===================== ヘッダー ===================== */
+.ys-header{ display:flex; align-items:center; justify-content:space-between; padding:14px 20px; background:var(--white); border-bottom:1px solid var(--line); }
+.ys-header-logo{ height:22px; width:auto; display:block; }
+.ys-header-tag{ font-size:.66rem; font-weight:700; color:var(--pink); letter-spacing:.03em; }
+
+/* ===================== FV ===================== */
+.ys-hero{ position:relative; background:var(--red); }
+.ys-hero-media{ position:relative; overflow:hidden; }
+.ys-hero-media img{ width:100%; display:block; }
+
+.ys-hero-confetti{ position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:3; }
+.ys-confetti-piece{ position:absolute; top:-20px; opacity:0; will-change:transform,opacity; }
+.ys-hero-confetti.is-play .ys-confetti-piece{ animation-name:ys-confetti-fall; animation-timing-function:ease-in; animation-fill-mode:forwards; }
+@keyframes ys-confetti-fall{
+  0%{ transform:translate(0,0) rotate(0deg); opacity:1; }
+  85%{ opacity:1; }
+  100%{ transform:translate(var(--ys-drift),var(--ys-fall)) rotate(var(--ys-rot)); opacity:0; }
+}
+
+/* 画像内の「クーポン獲得はこちら」ボタン位置に重ねる実クリック領域 */
+.ys-hero-cta{
+  position:absolute; left:3%; right:3%; top:91.2%; height:4%;
+  border-radius:999px; z-index:2;
+  box-shadow:0 0 0 0 rgba(255,255,255,.6);
+  animation:ys-ctapulse 2.2s ease-in-out infinite;
+}
+@keyframes ys-ctapulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(255,255,255,.5); }
+  50%{ box-shadow:0 0 0 8px rgba(255,255,255,0); }
+}
+.ys-hero-cta.is-ended{ animation:none; pointer-events:none; }
+
+/* ===================== タイマー(目立たせる) ===================== */
+.ys-timer{
+  position:relative; background:var(--plum); padding:22px 20px 26px; text-align:center;
+}
+.ys-timer-inner{ position:relative; z-index:1; }
+.ys-timer-label{
+  display:inline-flex; align-items:center; gap:8px; font-size:.86rem; font-weight:900;
+  color:var(--white); background:var(--pink); border-radius:999px; padding:6px 18px; margin:0 0 14px;
+  letter-spacing:.02em;
+}
+.ys-timer-sub{ font-size:.72rem; font-weight:700; color:rgba(255,255,255,.75); margin:0 0 16px; letter-spacing:.03em; }
+.ys-timer-digits{ display:flex; align-items:flex-end; justify-content:center; gap:10px; }
+.ys-timer-seg{ display:flex; flex-direction:column; align-items:center; min-width:64px; }
+.ys-timer-seg b{
+  font-size:2.4rem; line-height:1; color:var(--white); background:rgba(255,255,255,.08);
+  border:2px solid var(--pink); border-radius:12px; padding:10px 6px; width:100%;
+  box-shadow:0 8px 20px rgba(255,61,111,.35);
+}
+.ys-timer-seg small{ font-size:.62rem; font-weight:700; color:rgba(255,255,255,.7); margin-top:6px; letter-spacing:.05em; }
+.ys-timer-sep{ font-size:1.8rem; font-weight:700; color:var(--pink); align-self:center; margin-bottom:22px; }
+.ys-timer-ended-note{ display:none; font-size:.78rem; font-weight:700; color:rgba(255,255,255,.85); margin-top:16px; line-height:1.8; }
+.ys-timer.is-ended .ys-timer-digits,
+.ys-timer.is-ended .ys-timer-sub{ display:none; }
+.ys-timer.is-ended .ys-timer-ended-note{ display:block; }
+
+@media screen and (min-width:600px){
+  .ys-timer-seg b{ font-size:3rem; padding:14px 8px; }
+  .ys-timer-seg{ min-width:76px; }
+}
+</style>
+</head>
+<body>
+<div class="ys-wrap">
+
+  <header class="ys-header">
+    <img src="images/logo.png" alt="Yunth" class="ys-header-logo">
+    <span class="ys-header-tag">楽天スーパーSALE会場</span>
+  </header>
+
+  <!-- ============================================================
+       ファーストビュー(1枚の告知画像+実クリック領域を重ねる)
+       ============================================================ -->
+  <section class="ys-hero">
+    <div class="ys-hero-media">
+      <img src="images/hero/yunthss-fv.jpg" alt="楽天スーパーSALE 9/4(金)20:00〜9/11(金)1:59 Yunth各種美容液が20%OFFクーポン+ポイント10倍。さらに9/3(木)10:00〜23:59はチャンスタイム、美容液に特別セットを先着5300名様にプレゼント。">
+      <div class="ys-hero-confetti" id="ysHeroConfetti" aria-hidden="true"></div>
+      <!-- ▼画像内の「クーポン獲得はこちら」ボタンの上に重なる実際のリンク。COUPON_URL確定後に差し替え -->
+      <a href="#" class="ys-hero-cta" data-coupon aria-label="クーポン獲得はこちら"></a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       タイマー(9/3(木)23:59のチャンスタイム終了まで)
+       ============================================================ -->
+  <section class="ys-timer" id="ysTimer">
+    <div class="ys-timer-inner">
+      <p class="ys-timer-label" id="ysTimerLabel">3日限定企画終了まで</p>
+      <p class="ys-timer-sub">9月3日(木) 10:00〜23:59限定</p>
+      <div class="ys-timer-digits" id="ysTimerDigits">
+        <div class="ys-timer-seg"><b class="ys-num" id="ysD">00</b><small>日</small></div>
+        <span class="ys-timer-sep">:</span>
+        <div class="ys-timer-seg"><b class="ys-num" id="ysH">00</b><small>時間</small></div>
+        <span class="ys-timer-sep">:</span>
+        <div class="ys-timer-seg"><b class="ys-num" id="ysM">00</b><small>分</small></div>
+        <span class="ys-timer-sep">:</span>
+        <div class="ys-timer-seg"><b class="ys-num" id="ysS">00</b><small>秒</small></div>
+      </div>
+      <p class="ys-timer-ended-note">9/3のチャンスタイムは終了しました。<br>楽天スーパーSALE本編(9/4 20:00〜9/11 1:59)は引き続き20%OFFクーポン+ポイント10倍対象です。</p>
+    </div>
+  </section>
+
+  <!-- 商品カードセクションは商品リスト確定後に追加予定 -->
+
+</div>
+
+<script>
+/* TODO: 実際のクーポン取得URLに差し替えてください */
+const COUPON_URL = "#";
+document.querySelectorAll('[data-coupon]').forEach(btn=>{ btn.setAttribute('href', COUPON_URL); });
+
+/* 9/3(木) 23:59:59 チャンスタイム終了までのカウントダウン */
+const CHANCE_END = new Date("2026-09-03T23:59:59+09:00");
+
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function updateTimer(){
+  const now = new Date();
+  const diff = CHANCE_END - now;
+  const timerBox = document.getElementById('ysTimer');
+  const cta = document.querySelector('.ys-hero-cta');
+
+  if(diff <= 0){
+    timerBox.classList.add('is-ended');
+    document.getElementById('ysTimerLabel').textContent = '3日限定企画終了';
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins = Math.floor((diff % 3600000) / 60000);
+  const secs = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById('ysD').textContent = pad(days);
+  document.getElementById('ysH').textContent = pad(hours);
+  document.getElementById('ysM').textContent = pad(mins);
+  document.getElementById('ysS').textContent = pad(secs);
+}
+updateTimer();
+setInterval(updateTimer, 1000);
+
+/* ===================== FVの紙吹雪バースト演出 ===================== */
+(function(){
+  const layer = document.getElementById('ysHeroConfetti');
+  if(!layer){ return; }
+
+  const colors = ['#FF3D6F', '#F01D24', '#FFFFFF', '#FFD8E6', '#FFC72C'];
+  const count = 28;
+
+  function burst(){
+    const frameHeight = layer.parentElement.offsetHeight;
+    layer.innerHTML = '';
+    layer.classList.remove('is-play');
+
+    for(let i = 0; i < count; i++){
+      const piece = document.createElement('span');
+      piece.className = 'ys-confetti-piece';
+      const isRibbon = Math.random() < 0.35;
+      const size = isRibbon ? (3 + Math.random() * 2) : (6 + Math.random() * 6);
+      piece.style.width = size + 'px';
+      piece.style.height = (isRibbon ? size * 4 : size) + 'px';
+      piece.style.borderRadius = '2px';
+      piece.style.left = (Math.random() * 100) + '%';
+      piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.animationDuration = (1.6 + Math.random() * 1.2) + 's';
+      piece.style.animationDelay = (Math.random() * 0.7) + 's';
+      piece.style.setProperty('--ys-fall', (frameHeight * 0.7 + Math.random() * frameHeight * 0.3) + 'px');
+      piece.style.setProperty('--ys-drift', (Math.random() * 100 - 50) + 'px');
+      piece.style.setProperty('--ys-rot', (360 + Math.random() * 360) + 'deg');
+      layer.appendChild(piece);
+    }
+
+    void layer.offsetWidth;
+    layer.classList.add('is-play');
+  }
+
+  function scheduleNext(){
+    const delay = 5000 + Math.random() * 3000;
+    setTimeout(()=>{ burst(); scheduleNext(); }, delay);
+  }
+
+  window.addEventListener('load', ()=>{
+    burst();
+    scheduleNext();
+  });
+})();
+</script>
+</body>
+</html>
