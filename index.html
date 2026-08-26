@@ -96,25 +96,8 @@ a{ text-decoration:none; color:inherit; }
 <body>
 <div class="ys-wrap">
 
-  <header class="ys-header">
-    <img src="images/logo.png" alt="Yunth" class="ys-header-logo">
-    <span class="ys-header-tag">楽天スーパーSALE会場</span>
-  </header>
-
   <!-- ============================================================
-       ファーストビュー(1枚の告知画像+実クリック領域を重ねる)
-       ============================================================ -->
-  <section class="ys-hero">
-    <div class="ys-hero-media">
-      <img src="images/hero/yunthss-fv.jpg" alt="楽天スーパーSALE 9/4(金)20:00〜9/11(金)1:59 Yunth各種美容液が20%OFFクーポン+ポイント10倍。さらに9/3(木)10:00〜23:59はチャンスタイム、美容液に特別セットを先着5300名様にプレゼント。">
-      <div class="ys-hero-confetti" id="ysHeroConfetti" aria-hidden="true"></div>
-      <!-- ▼画像内の「クーポン獲得はこちら」ボタンの上に重なる実際のリンク。COUPON_URL確定後に差し替え -->
-      <a href="#" class="ys-hero-cta" data-coupon aria-label="クーポン獲得はこちら"></a>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       タイマー(9/3(木)23:59のチャンスタイム終了まで)
+       タイマー(9/3(木)23:59のチャンスタイム終了まで) — 最上部に配置
        ============================================================ -->
   <section class="ys-timer" id="ysTimer">
     <div class="ys-timer-inner">
@@ -130,6 +113,23 @@ a{ text-decoration:none; color:inherit; }
         <div class="ys-timer-seg"><b class="ys-num" id="ysS">00</b><small>秒</small></div>
       </div>
       <p class="ys-timer-ended-note">9/3のチャンスタイムは終了しました。<br>楽天スーパーSALE本編(9/4 20:00〜9/11 1:59)は引き続き20%OFFクーポン+ポイント10倍対象です。</p>
+    </div>
+  </section>
+
+  <header class="ys-header">
+    <img src="images/logo.png" alt="Yunth" class="ys-header-logo">
+    <span class="ys-header-tag">楽天スーパーSALE会場</span>
+  </header>
+
+  <!-- ============================================================
+       ファーストビュー(1枚の告知画像+実クリック領域を重ねる)
+       ============================================================ -->
+  <section class="ys-hero">
+    <div class="ys-hero-media">
+      <img src="images/hero/yunthss-fv.jpg" alt="楽天スーパーSALE 9/4(金)20:00〜9/11(金)1:59 Yunth各種美容液が20%OFFクーポン+ポイント10倍。さらに9/3(木)10:00〜23:59はチャンスタイム、美容液に特別セットを先着5300名様にプレゼント。">
+      <div class="ys-hero-confetti" id="ysHeroConfetti" aria-hidden="true"></div>
+      <!-- ▼画像内の「クーポン獲得はこちら」ボタンの上に重なる実際のリンク。COUPON_URL確定後に差し替え -->
+      <a href="#" class="ys-hero-cta" data-coupon aria-label="クーポン獲得はこちら"></a>
     </div>
   </section>
 
