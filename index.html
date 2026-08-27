@@ -120,12 +120,15 @@ a{ text-decoration:none; color:inherit; }
   font-size:.76rem; font-weight:700; line-height:1.55; color:var(--ink);
   margin:0 0 8px; min-height:2.4em; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
 }
+.ys-annot{ font-size:.65em; font-weight:700; vertical-align:super; line-height:0; }
 .ys-pcard-price{ font-size:.92rem; font-weight:900; color:var(--pink); margin:0 0 10px; }
 .ys-pcard-price .ys-num{ font-size:1.05em; }
 .ys-pcard-btn{
   display:block; text-align:center; background:linear-gradient(120deg, var(--pink), var(--red));
   color:var(--white); font-size:.72rem; font-weight:900; border-radius:999px; padding:9px;
 }
+
+.ys-footnote{ font-size:.66rem; font-weight:500; color:var(--ink-soft); margin:14px 2px 0; line-height:1.6; }
 
 /* 横長カード(定番アイテムの下に1列ずつ配置) */
 .ys-wide-list{ display:flex; flex-direction:column; gap:16px; margin-top:36px; }
@@ -228,7 +231,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="https://item.rakuten.co.jp/yunth/10000000/" class="ys-pcard" target="_blank" rel="noopener">
         <div class="ys-pcard-img"><img src="images/product/10000000.jpg" alt="Yunth 生ビタミンC 美白美容液 1ml×28包" loading="lazy"></div>
         <div class="ys-pcard-body">
-          <p class="ys-pcard-name">Yunth 生ビタミンC 美白美容液 1ml×28包</p>
+          <p class="ys-pcard-name">Yunth 生ビタミンC 美白<sup class="ys-annot">※</sup>美容液 1ml×28包</p>
           <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
           <span class="ys-pcard-btn">詳細を見る →</span>
         </div>
@@ -264,7 +267,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="https://item.rakuten.co.jp/yunth/10000007/" class="ys-pcard" target="_blank" rel="noopener">
         <div class="ys-pcard-img"><img src="images/product/10000007.jpg" alt="Yunth 生VC美白クリーム 30g" loading="lazy"></div>
         <div class="ys-pcard-body">
-          <p class="ys-pcard-name">Yunth 生VC美白クリーム 30g</p>
+          <p class="ys-pcard-name">Yunth 生VC美白<sup class="ys-annot">※</sup>クリーム 30g</p>
           <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
           <span class="ys-pcard-btn">詳細を見る →</span>
         </div>
@@ -300,7 +303,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="https://item.rakuten.co.jp/yunth/yb-113-001/" class="ys-pcard" target="_blank" rel="noopener">
         <div class="ys-pcard-img"><img src="images/product/yb-113-001.jpg" alt="Yunth 美白ハンドセラム 35g" loading="lazy"></div>
         <div class="ys-pcard-body">
-          <p class="ys-pcard-name">Yunth 美白ハンドセラム 35g</p>
+          <p class="ys-pcard-name">Yunth 美白<sup class="ys-annot">※</sup>ハンドセラム 35g</p>
           <p class="ys-pcard-price"><span class="ys-num">1,980</span>円〜</p>
           <span class="ys-pcard-btn">詳細を見る →</span>
         </div>
@@ -318,7 +321,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="https://item.rakuten.co.jp/yunth/10000001/" class="ys-pcard" target="_blank" rel="noopener">
         <div class="ys-pcard-img"><img src="images/product/10000001.jpg" alt="Yunth 美白シートマスク 22ml×6枚" loading="lazy"></div>
         <div class="ys-pcard-body">
-          <p class="ys-pcard-name">Yunth 美白シートマスク 22ml×6枚</p>
+          <p class="ys-pcard-name">Yunth 美白<sup class="ys-annot">※</sup>シートマスク 22ml×6枚</p>
           <p class="ys-pcard-price"><span class="ys-num">1,980</span>円〜</p>
           <span class="ys-pcard-btn">詳細を見る →</span>
         </div>
@@ -327,7 +330,7 @@ a{ text-decoration:none; color:inherit; }
       <a href="https://item.rakuten.co.jp/yunth/111-01/" class="ys-pcard" target="_blank" rel="noopener">
         <div class="ys-pcard-img"><img src="images/product/111-01.jpg" alt="Yunth 生VC美白化粧水 120ml" loading="lazy"></div>
         <div class="ys-pcard-body">
-          <p class="ys-pcard-name">Yunth 生VC美白化粧水 120ml</p>
+          <p class="ys-pcard-name">Yunth 生VC美白<sup class="ys-annot">※</sup>化粧水 120ml</p>
           <p class="ys-pcard-price"><span class="ys-num">3,960</span>円〜</p>
           <span class="ys-pcard-btn">詳細を見る →</span>
         </div>
@@ -361,6 +364,8 @@ a{ text-decoration:none; color:inherit; }
       </a>
 
     </div>
+
+    <p class="ys-footnote">※メラニンの生成を抑え、シミ・そばかすを防ぐ</p>
 
     <div class="ys-wide-list">
 
