@@ -316,23 +316,30 @@ a{ text-decoration:none; color:inherit; }
 const COUPON_URL = "#";
 document.querySelectorAll('[data-coupon]').forEach(btn=>{ btn.setAttribute('href', COUPON_URL); });
 
-/* 9/3(木) 23:59:59 チャンスタイム終了までのカウントダウン */
+/* 9/3(木) 10:00〜23:59 チャンスタイムの開始前は「開始まで」、開始後は「終了まで」に切り替わるカウントダウン */
+const CHANCE_START = new Date("2026-09-03T10:00:00+09:00");
 const CHANCE_END = new Date("2026-09-03T23:59:59+09:00");
 
 function pad(n){ return String(n).padStart(2,'0'); }
 
 function updateTimer(){
   const now = new Date();
-  const diff = CHANCE_END - now;
   const timerBox = document.getElementById('ysTimer');
-  const cta = document.querySelector('.ys-hero-cta');
+  const label = document.getElementById('ysTimerLabel');
 
-  if(diff <= 0){
+  if(now >= CHANCE_END){
     timerBox.classList.add('is-ended');
-    document.getElementById('ysTimerLabel').textContent = '9/3限定！先着5300名様セット終了';
+    label.textContent = '9/3限定！先着5300名様セット終了';
     return;
   }
 
+  const beforeStart = now < CHANCE_START;
+  const target = beforeStart ? CHANCE_START : CHANCE_END;
+  label.textContent = beforeStart
+    ? '9/3限定！先着5300名様セット開始まで'
+    : '9/3限定！先着5300名様セット終了まで';
+
+  const diff = target - now;
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff % 86400000) / 3600000);
   const mins = Math.floor((diff % 3600000) / 60000);
