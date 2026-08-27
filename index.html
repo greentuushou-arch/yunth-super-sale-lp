@@ -312,8 +312,7 @@ a{ text-decoration:none; color:inherit; }
 </div>
 
 <script>
-/* TODO: 実際のクーポン取得URLに差し替えてください */
-const COUPON_URL = "#";
+const COUPON_URL = "https://coupon.rakuten.co.jp/getCoupon?getkey=NU9HVS1aNUQwLU1LQ0wtUks3Tg--&rt=&rd=https://item.rakuten.co.jp/yunth/10000000/";
 document.querySelectorAll('[data-coupon]').forEach(btn=>{ btn.setAttribute('href', COUPON_URL); });
 
 /* 9/3(木) 10:00〜23:59 チャンスタイムの開始前は「開始まで」、開始後は「終了まで」に切り替わるカウントダウン */
